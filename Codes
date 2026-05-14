@@ -1,0 +1,42 @@
+ 1  clear
+    2  cd
+    3  apt update
+    4  apt upgrade -y
+    5  clear
+    6  wget https://etinstallers.demoability.dynatracelabs.com/latest/dynatrace-easytravel-linux-x86_64.jar
+    7  sudo apt install openjdk-11-jdk -y
+    8  sudo apt update
+    9  java -version
+   10  ll
+   11  java -jar dynatrace-easytravel-linux-x86_64.jar
+   12  ll
+   13  cd /etc/datadog-agent/
+   14  ll
+   15  cat datadog.yaml
+   16  clear
+   17  nano datadog.yaml
+   18  systemctl restart datadog-agent
+   19  systemctl status datadog-agent
+   20  nano datadog.yaml
+   21  systemctl restart datadog-agent
+   22  nano datadog.yaml
+   23  systemctl restart datadog-agent
+   24  datadog-agent configcheck | head -50
+   25  datadog-agent status | grep -A "Process Agent"
+   26  datadog-agent status | grep -A 3 "Process Agent"
+   27  sudo syste,ctl status datadog-agent-process
+   28  sudo systemctl status datadog-agent-process
+   29  sudo tail -50 /var/log/datadog/process-agent.log
+   30  nano datadog.yaml
+   31  clear
+   32  sudo datadog-agent status3
+   33  sudo datadog-agent status
+   34  sudo datadog-agent status | grep -A 20 "Process Component"
+   35  ps aux | grep -E "datadog-agent | process-agent" | grep -v grep
+   36  ps aux | grep -E "datadog-agent|process-agent" | grep -v grep
+   37  sudo datadog-agent process-agent status
+   38  grep -E "datadog-agent|process=agent"
+   39  grep -E "datadog-agent|process-agent"
+   40  sudo datadog-agent status --json | jq '.processAgentStatus'
+   41  sudo -u dd-agent datadog-agent check process
+   42  history
