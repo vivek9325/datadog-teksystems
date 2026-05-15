@@ -40,3 +40,42 @@
    40  sudo datadog-agent status --json | jq '.processAgentStatus'
    41  sudo -u dd-agent datadog-agent check process
    42  history
+
+====================================================================================================================================================================
+Access server via powershell
+
+
+$key = "E:\VK_GIT\datadog-teksystems\dd_teksystem_us_east.pem"
+
+ 
+
+icacls $key /inheritance:r
+icacls $key /remove "Authenticated Users" "Users" "Everyone" "BUILTIN\Users"
+icacls $key /grant:r "$($env:USERNAME):R"
+
+ssh -i "E:\VK_GIT\datadog-teksystems\dd_tek... by Technical Trainer304
+10:09 AM
+Technical Trainer304
+
+ssh -i "E:\VK_GIT\datadog-teksystems\dd_teksystem_us_east.pem" ubuntu@3.86.55.233
+
+
+
+
+=====================================================================================================================================================================
+
+Install Easytravel in Ubuntu
+
+   1  clear
+    2  sudo apt update
+    3  sudo apt install openjdk-11-jdk -y
+    4  java -version
+    5  wget https://etinstallers.demoability.dynatracelabs.com/latest/dynatrace-easytravel-linux-x86_64.jar
+    6  java -jar dynatrace-easytravel-linux-x86_64.jar
+    7  ll
+    8  cd easytravel-2.0.0-x64/
+    9  ll
+   10  cd weblauncher/
+   11  ll
+   12  ./weblauncher.sh
+   13  history
